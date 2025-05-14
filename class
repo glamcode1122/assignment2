@@ -1,0 +1,30 @@
+# Base class
+class Superhero:
+    def __init__(self, name, power, level):
+        self.name = name
+        self.power = power
+        self.level = level
+
+    def introduce(self):
+        print(f"I am {self.name}, my power is {self.power}, and my level is {self.level}!")
+
+    def use_power(self):
+        print(f"{self.name} uses {self.power}!")
+
+# Derived class demonstrating inheritance and encapsulation
+class FlyingHero(Superhero):
+    def __init__(self, name, power, level, flight_speed):
+        super().__init__(name, power, level)
+        self.flight_speed = flight_speed
+
+    def use_power(self):
+        print(f"{self.name} takes off at {self.flight_speed} km/h and uses {self.power} from the sky!")
+
+# Another subclass
+class TechHero(Superhero):
+    def __init__(self, name, power, level, gadgets):
+        super().__init__(name, power, level)
+        self.gadgets = gadgets
+
+    def use_power(self):
+        print(f"{self.name} uses high-tech gadgets: {', '.join(self.gadgets)} to amplify {self.power}!")
