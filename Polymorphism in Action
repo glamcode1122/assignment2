@@ -1,0 +1,11 @@
+def start_journey(vehicle: Vehicle):
+    vehicle.move()
+
+# Create different vehicles
+v1 = Car()
+v2 = Plane()
+v3 = Boat()
+
+# Demonstrate polymorphism
+for v in [v1, v2, v3]:
+    start_journey(v)
